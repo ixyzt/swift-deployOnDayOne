@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					8FC4C6E51D99578E00A1C2A3 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = WNAGBXF4G9;
+						DevelopmentTeam = 3SNBA99P89;
 						ProvisioningStyle = Automatic;
 					};
 					8FC4C6F91D99578E00A1C2A3 = {
@@ -341,7 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WNAGBXF4G9;
+				DEVELOPMENT_TEAM = 3SNBA99P89;
 				INFOPLIST_FILE = ticTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatironschool.com.ticTacToe;
@@ -354,7 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WNAGBXF4G9;
+				DEVELOPMENT_TEAM = 3SNBA99P89;
 				INFOPLIST_FILE = ticTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatironschool.com.ticTacToe;
@@ -412,6 +412,7 @@
 				8FC4C7051D99578E00A1C2A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FC4C7061D99578E00A1C2A3 /* Build configuration list for PBXNativeTarget "ticTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				8FC4C7081D99578E00A1C2A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

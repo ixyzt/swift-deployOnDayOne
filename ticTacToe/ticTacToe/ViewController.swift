@@ -9,8 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var computerPlayer = false
+    
     var gameWon = false
-    var computerPlayer = true
+    var gameTied = false
+    var winningPlayer = ""
     var numberOfTurns = 0
     var openSquares = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var buttonsAlreadyPressed = [["", "", ""], ["", "", ""], ["", "", ""]]
@@ -27,8 +30,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var turnLabel: UILabel!
     
+    @IBOutlet weak var pvpButton: UIButton!
+    @IBOutlet weak var pvcButton: UIButton!
+    
+    @IBOutlet weak var boardCoveringButton: UIButton!
+    @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet var mainView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        turnLabel.isHidden = true
+        playAgainButton.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -46,11 +58,20 @@ class ViewController: UIViewController {
     }
     
     func changeLabel() {
-        if !gameWon {
-            if numberOfTurns % 2 == 0 {
+        if gameWon {
+            turnLabel.text = "\(winningPlayer) wins!"
+        } else {
+            if numberOfTurns == 9 {
+                gameTied = true
+                turnLabel.text = "It's a tie!"
+            } else if numberOfTurns % 2 == 0 {
                 turnLabel.text = "Player 1's Turn"
             } else {
-                turnLabel.text = "Player 2's Turn"
+                if computerPlayer { // fix this and insert short delay for computer turn
+                    turnLabel.text = "Computer's Turn"
+                } else {
+                    turnLabel.text = "Player 2's Turn"
+                }
             }
         }
     }
@@ -174,23 +195,22 @@ class ViewController: UIViewController {
             "diagonals" : getDiagonals()
         ]
         
-        for (sequenceType, arrayOfSequences) in sequences {
+        for arrayOfSequences in sequences.values { // use dictionary keys to represent winning sequence with highlighted color
             for sequence in arrayOfSequences {
                 if isNotEmpty(sequence: sequence) && isHomogeneous(sequence: sequence) {
                     gameWon = true
                     
                     if sequence[0] == "X" {
-                        displayWinner(winningPlayer: "Player 1")
+                        winningPlayer = "Player 1"
                     } else {
-                        displayWinner(winningPlayer: "Player 2")
+                        if computerPlayer {
+                            winningPlayer = "Computer"
+                        } else {
+                            winningPlayer = "Player 2"
+                        }
                     }
                 }
             }
-        }
-        
-        // tie
-        if numberOfTurns == 9 && !gameWon {
-            displayTie()
         }
     }
     
@@ -198,8 +218,26 @@ class ViewController: UIViewController {
         turnLabel.text = "\(winningPlayer) wins!"
     }
     
-    func displayTie() {
-        turnLabel.text = "It's a tie!"
+    func finalScreen() {
+        playAgainButton.isHidden = false
+    }
+    
+    @IBAction func pvpButtonPressed(_ sender: AnyObject) {
+        changeLabel()
+        computerPlayer = false
+        turnLabel.isHidden = false
+        pvpButton.isHidden = true
+        pvcButton.isHidden = true
+        boardCoveringButton.isHidden = true
+    }
+    
+    @IBAction func pvcButtonPressed(_ sender: AnyObject) {
+        changeLabel()
+        computerPlayer = true
+        turnLabel.isHidden = false
+        pvpButton.isHidden = true
+        pvcButton.isHidden = true
+        boardCoveringButton.isHidden = true
     }
     
     @IBAction func gameButtonPressed(_ sender: AnyObject) {
@@ -210,13 +248,41 @@ class ViewController: UIViewController {
             isGameOver()
             changeLabel()
         }
-       
+        
         // computer
         if !gameWon && computerPlayer && numberOfTurns < 9 {
             makeMove(chosenSquare: openSquares[Int(arc4random_uniform(UInt32(openSquares.count)))])
             isGameOver()
             changeLabel()
         }
+        
+        if gameWon || gameTied {
+            finalScreen()
+        }
+    }
+    
+    @IBAction func newGame(_ sender: AnyObject) {
+        playAgainButton.isHidden = true
+        boardCoveringButton.isHidden = false
+        pvcButton.isHidden = false
+        pvpButton.isHidden = false
+        turnLabel.isHidden = true
+        computerPlayer = false
+        gameWon = false
+        gameTied = false
+        winningPlayer = ""
+        numberOfTurns = 0
+        openSquares = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        buttonsAlreadyPressed = [["", "", ""], ["", "", ""], ["", "", ""]]
+        label1.text = ""
+        label2.text = ""
+        label3.text = ""
+        label4.text = ""
+        label5.text = ""
+        label6.text = ""
+        label7.text = ""
+        label8.text = ""
+        label9.text = ""
     }
 }
 
