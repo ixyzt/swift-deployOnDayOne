@@ -18,76 +18,163 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OID-Pk-CrJ">
-                                <frame key="frameInset" minX="59" minY="150" width="80" height="80"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-uj-9IB">
+                                <frame key="frameInset" minX="59" minY="154" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="1x1"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFa-cC-EGQ">
-                                <frame key="frameInset" minX="147" minY="150" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="1x2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVA-Z5-KCi">
-                                <frame key="frameInset" minX="235" minY="150" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="1x3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mz0-RS-qdz">
-                                <frame key="frameInset" minX="59" minY="238" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="2x1"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-SW-Sig">
-                                <frame key="frameInset" minX="147" minY="238" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="2x2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-6D-Mrx">
-                                <frame key="frameInset" minX="235" minY="238" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="2x3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEw-7e-et7">
-                                <frame key="frameInset" minX="59" minY="326" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="3x1"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFt-3P-tOx">
-                                <frame key="frameInset" minX="147" minY="326" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="3x2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mek-1X-BWC">
-                                <frame key="frameInset" minX="235" minY="326" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="3x3"/>
+                                <color key="backgroundColor" red="0.49576991580310881" green="0.49576991580310881" blue="0.49576991580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="gameSquarePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSs-ay-XHa"/>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="omU-Pl-n24"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxJ-BZ-SD3">
+                                <frame key="frameInset" minX="147" minY="154" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49576991580310881" green="0.49576991580310881" blue="0.49576991580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nnz-yz-hZx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynp-ug-6rA">
+                                <frame key="frameInset" minX="235" minY="154" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49576991580310881" green="0.49576991580310881" blue="0.49576991580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b3G-AP-wf7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5j-yu-2GB">
+                                <frame key="frameInset" minX="59" minY="242" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49576991580310881" green="0.49576991580310881" blue="0.49576991580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bYh-yu-ATZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yL-9Z-YqN">
+                                <frame key="frameInset" minX="147" minY="242" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49576991580310881" green="0.49576991580310881" blue="0.49576991580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I39-7G-X4q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztt-Bw-XkH">
+                                <frame key="frameInset" minX="235" minY="242" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49576991580310881" green="0.49576991580310881" blue="0.49576991580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lwq-t7-vGZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ur-eb-ox0">
+                                <frame key="frameInset" minX="59" minY="330" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49576991580310881" green="0.49576991580310881" blue="0.49576991580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cjW-RF-bVa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nao-HS-WhW">
+                                <frame key="frameInset" minX="147" minY="330" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49576991580310881" green="0.49576991580310881" blue="0.49576991580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWI-OK-tGz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URe-lP-kVP">
+                                <frame key="frameInset" minX="235" minY="330" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49576991580310881" green="0.49576991580310881" blue="0.49576991580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8O-v5-ORh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lf-oJ-td8">
+                                <frame key="frameInset" minX="59" minY="154" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78517648959999997" green="0.78517648959999997" blue="0.78517648959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2db-3N-q5H">
+                                <frame key="frameInset" minX="147" minY="154" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78517648959999997" green="0.78517648959999997" blue="0.78517648959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdM-F0-aft">
+                                <frame key="frameInset" minX="235" minY="154" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78517648959999997" green="0.78517648959999997" blue="0.78517648959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H31-cc-uio">
+                                <frame key="frameInset" minX="59" minY="242" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78517648959999997" green="0.78517648959999997" blue="0.78517648959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxp-Bw-MJR">
+                                <frame key="frameInset" minX="147" minY="242" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78517648959999997" green="0.78517648959999997" blue="0.78517648959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha3-JF-VuS">
+                                <frame key="frameInset" minX="235" minY="242" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78517648959999997" green="0.78517648959999997" blue="0.78517648959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6K-gp-6eX">
+                                <frame key="frameInset" minX="59" minY="330" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78517648959999997" green="0.78517648959999997" blue="0.78517648959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZS-cs-cJk">
+                                <frame key="frameInset" minX="147" minY="330" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78517648959999997" green="0.78517648959999997" blue="0.78517648959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reo-mv-hnh">
+                                <frame key="frameInset" minX="235" minY="330" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78517648959999997" green="0.78517648959999997" blue="0.78517648959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="gameButton1x1" destination="OID-Pk-CrJ" id="flx-gx-1hs"/>
-                        <outlet property="gameButton1x2" destination="WFa-cC-EGQ" id="yqa-uq-3MJ"/>
-                        <outlet property="gameButton1x3" destination="NVA-Z5-KCi" id="h0g-jm-Mps"/>
-                        <outlet property="gameButton2x1" destination="mz0-RS-qdz" id="Mir-4T-ybs"/>
-                        <outlet property="gameButton2x2" destination="gfu-SW-Sig" id="vxn-Rn-nfe"/>
-                        <outlet property="gameButton2x3" destination="cIS-6D-Mrx" id="geK-Hh-8Mc"/>
-                        <outlet property="gameButton3x1" destination="eEw-7e-et7" id="eak-62-4Cu"/>
-                        <outlet property="gameButton3x2" destination="CFt-3P-tOx" id="2Hl-yx-ypb"/>
-                        <outlet property="gameButton3x3" destination="Mek-1X-BWC" id="Krm-yD-Ybg"/>
+                        <outlet property="label1" destination="5lf-oJ-td8" id="0gY-uH-g2f"/>
+                        <outlet property="label2" destination="2db-3N-q5H" id="jn4-ij-jSH"/>
+                        <outlet property="label3" destination="GdM-F0-aft" id="rUR-bQ-w91"/>
+                        <outlet property="label4" destination="H31-cc-uio" id="TiM-jo-GRD"/>
+                        <outlet property="label5" destination="sxp-Bw-MJR" id="G8C-13-Gfy"/>
+                        <outlet property="label6" destination="ha3-JF-VuS" id="Mcs-69-Wsq"/>
+                        <outlet property="label7" destination="c6K-gp-6eX" id="eVx-0i-GMi"/>
+                        <outlet property="label8" destination="pZS-cs-cJk" id="Ohe-6N-xZM"/>
+                        <outlet property="label9" destination="reo-mv-hnh" id="FYa-um-VDa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
