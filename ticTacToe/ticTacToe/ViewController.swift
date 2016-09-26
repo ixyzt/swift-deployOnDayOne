@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var gameWon = false
+    var computerPlayer = true
     var numberOfTurns = 0
+    var openSquares = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var buttonsAlreadyPressed = [["", "", ""], ["", "", ""], ["", "", ""]]
     
     @IBOutlet weak var label1: UILabel!
@@ -35,13 +38,102 @@ class ViewController: UIViewController {
     }
     
     func getMove() -> String {
-        if numberOfTurns % 2 == 0{
-            turnLabel.text = "Player 1"
+        if numberOfTurns % 2 == 0 {
             return "X"
         } else {
-            turnLabel.text = "Player 2"
             return "O"
         }
+    }
+    
+    func changeLabel() {
+        if !gameWon {
+            if numberOfTurns % 2 == 0 {
+                turnLabel.text = "Player 1's Turn"
+            } else {
+                turnLabel.text = "Player 2's Turn"
+            }
+        }
+    }
+    
+    func makeMove(chosenSquare: Int) {
+        var currentMove: String
+        switch chosenSquare {
+        case 1:
+            if buttonsAlreadyPressed[0][0] == "" {
+                currentMove = getMove()
+                label1.text = currentMove
+                buttonsAlreadyPressed[0][0] = currentMove
+                openSquares.remove(at: openSquares.index(of: 1)!)
+                numberOfTurns += 1
+            }
+        case 2:
+            if buttonsAlreadyPressed[0][1] == "" {
+                currentMove = getMove()
+                label2.text = currentMove
+                buttonsAlreadyPressed[0][1] = currentMove
+                openSquares.remove(at: openSquares.index(of: 2)!)
+                numberOfTurns += 1
+            }
+        case 3:
+            if buttonsAlreadyPressed[0][2] == "" {
+                currentMove = getMove()
+                label3.text = currentMove
+                buttonsAlreadyPressed[0][2] = currentMove
+                openSquares.remove(at: openSquares.index(of: 3)!)
+                numberOfTurns += 1
+            }
+        case 4:
+            if buttonsAlreadyPressed[1][0] == "" {
+                currentMove = getMove()
+                label4.text = currentMove
+                buttonsAlreadyPressed[1][0] = currentMove
+                openSquares.remove(at: openSquares.index(of: 4)!)
+                numberOfTurns += 1
+            }
+        case 5:
+            if buttonsAlreadyPressed[1][1] == "" {
+                currentMove = getMove()
+                label5.text = currentMove
+                buttonsAlreadyPressed[1][1] = currentMove
+                openSquares.remove(at: openSquares.index(of: 5)!)
+                numberOfTurns += 1
+            }
+        case 6:
+            if buttonsAlreadyPressed[1][2] == "" {
+                currentMove = getMove()
+                label6.text = currentMove
+                buttonsAlreadyPressed[1][2] = currentMove
+                openSquares.remove(at: openSquares.index(of: 6)!)
+                numberOfTurns += 1
+            }
+        case 7:
+            if buttonsAlreadyPressed[2][0] == "" {
+                currentMove = getMove()
+                label7.text = currentMove
+                buttonsAlreadyPressed[2][0] = currentMove
+                openSquares.remove(at: openSquares.index(of: 7)!)
+                numberOfTurns += 1
+            }
+        case 8:
+            if buttonsAlreadyPressed[2][1] == "" {
+                currentMove = getMove()
+                label8.text = currentMove
+                buttonsAlreadyPressed[2][1] = currentMove
+                openSquares.remove(at: openSquares.index(of: 8)!)
+                numberOfTurns += 1
+            }
+        case 9:
+            if buttonsAlreadyPressed[2][2] == "" {
+                currentMove = getMove()
+                label9.text = currentMove
+                buttonsAlreadyPressed[2][2] = currentMove
+                openSquares.remove(at: openSquares.index(of: 9)!)
+                numberOfTurns += 1
+            }
+        default:
+            break
+        }
+        
     }
     
     func isNotEmpty(sequence: [String]) -> Bool {
@@ -76,7 +168,6 @@ class ViewController: UIViewController {
     }
     
     func isGameOver() {
-        var gameWon = false
         let sequences = [
             "rows" : buttonsAlreadyPressed,
             "columns" : getColumns(),
@@ -112,75 +203,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func gameButtonPressed(_ sender: AnyObject) {
-        var currentMove: String
         
-        switch sender.tag {
-        case 1:
-            if buttonsAlreadyPressed[0][0] == "" {
-                currentMove = getMove()
-                label1.text = currentMove
-                buttonsAlreadyPressed[0][0] = currentMove
-                numberOfTurns += 1
-            }
-        case 2:
-            if buttonsAlreadyPressed[0][1] == "" {
-                currentMove = getMove()
-                label2.text = currentMove
-                buttonsAlreadyPressed[0][1] = currentMove
-                numberOfTurns += 1
-            }
-        case 3:
-            if buttonsAlreadyPressed[0][2] == "" {
-                currentMove = getMove()
-                label3.text = currentMove
-                buttonsAlreadyPressed[0][2] = currentMove
-                numberOfTurns += 1
-            }
-        case 4:
-            if buttonsAlreadyPressed[1][0] == "" {
-                currentMove = getMove()
-                label4.text = currentMove
-                buttonsAlreadyPressed[1][0] = currentMove
-                numberOfTurns += 1
-            }
-        case 5:
-            if buttonsAlreadyPressed[1][1] == "" {
-                currentMove = getMove()
-                label5.text = currentMove
-                buttonsAlreadyPressed[1][1] = currentMove
-                numberOfTurns += 1
-            }
-        case 6:
-            if buttonsAlreadyPressed[1][2] == "" {
-                currentMove = getMove()
-                label6.text = currentMove
-                buttonsAlreadyPressed[1][2] = currentMove
-                numberOfTurns += 1
-            }
-        case 7:
-            if buttonsAlreadyPressed[2][0] == "" {
-                currentMove = getMove()
-                label7.text = currentMove
-                buttonsAlreadyPressed[2][0] = currentMove
-                numberOfTurns += 1
-            }
-        case 8:
-            if buttonsAlreadyPressed[2][1] == "" {
-                currentMove = getMove()
-                label8.text = currentMove
-                buttonsAlreadyPressed[2][1] = currentMove
-                numberOfTurns += 1
-            }
-        default:
-            if buttonsAlreadyPressed[2][2] == "" {
-                currentMove = getMove()
-                label9.text = currentMove
-                buttonsAlreadyPressed[2][2] = currentMove
-                numberOfTurns += 1
-            }
+        // human
+        if !gameWon {
+            makeMove(chosenSquare: sender.tag)
+            isGameOver()
+            changeLabel()
         }
-        
-        isGameOver()
+       
+        // computer
+        if !gameWon && computerPlayer && numberOfTurns < 9 {
+            makeMove(chosenSquare: openSquares[Int(arc4random_uniform(UInt32(openSquares.count)))])
+            isGameOver()
+            changeLabel()
+        }
     }
 }
 
