@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var label8: UILabel!
     @IBOutlet weak var label9: UILabel!
     
+    @IBOutlet weak var turnLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,15 +36,59 @@ class ViewController: UIViewController {
     
     func getMove() -> String {
         if numberOfTurns % 2 == 0{
+            turnLabel.text = "Player 1"
             return "X"
         } else {
+            turnLabel.text = "Player 2"
             return "O"
         }
     }
-    
-    func gameIsOver() {
+    func isNotEmpty(sequence: [String]) -> Bool {
+        if sequence[0] != "" && sequence[1] != "" && sequence[2] != "" {
+            return true
+        } else {
+            return false
+        }
     }
     
+    func getColumns() -> [[String]] {
+        return [
+            [buttonsAlreadyPressed[0][0], buttonsAlreadyPressed[1][0], buttonsAlreadyPressed[2][0]],
+            [buttonsAlreadyPressed[0][1], buttonsAlreadyPressed[1][1], buttonsAlreadyPressed[2][1]],
+            [buttonsAlreadyPressed[0][2], buttonsAlreadyPressed[1][2], buttonsAlreadyPressed[2][2]]
+        ]
+    }
+    
+    func getDiagonals() -> [[String]] {
+        return [
+            [buttonsAlreadyPressed[0][0], buttonsAlreadyPressed[1][1], buttonsAlreadyPressed[2][2]],
+            [buttonsAlreadyPressed[0][2], buttonsAlreadyPressed[1][1], buttonsAlreadyPressed[2][0]]
+        ]
+    }
+    
+    func isGameOver() {
+        let sequences = [
+            "rows" : buttonsAlreadyPressed,
+            "columns" : getColumns(),
+            "diagonals" : getDiagonals()
+        ]
+        
+        for (sequenceType, arrayOfSequences) in sequences {
+            for sequence in arrayOfSequences {
+                if isNotEmpty(sequence: sequence) && sequence[0] == sequence[1] && sequence[1] == sequence[2] {
+                    if sequence[0] == "X" {
+                        displayWinner(winningPlayer: "Player 1")
+                    } else {
+                        displayWinner(winningPlayer: "Player 2")
+                    }
+                }
+            }
+        }
+    }
+    
+    func displayWinner(winningPlayer: String) {
+        turnLabel.text = "\(winningPlayer) wins!"
+    }
     
     @IBAction func gameButtonPressed(_ sender: AnyObject) {
         var currentMove: String
@@ -112,6 +158,8 @@ class ViewController: UIViewController {
                 numberOfTurns += 1
             }
         }
+        
+        isGameOver()
     }
 }
 

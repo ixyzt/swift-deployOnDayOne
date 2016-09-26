@@ -162,6 +162,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1's Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E65-Fd-zbM">
+                                <frame key="frameInset" minX="83" minY="542" width="209" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -175,6 +182,7 @@
                         <outlet property="label7" destination="c6K-gp-6eX" id="eVx-0i-GMi"/>
                         <outlet property="label8" destination="pZS-cs-cJk" id="Ohe-6N-xZM"/>
                         <outlet property="label9" destination="reo-mv-hnh" id="FYa-um-VDa"/>
+                        <outlet property="turnLabel" destination="E65-Fd-zbM" id="69o-cw-w1o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
