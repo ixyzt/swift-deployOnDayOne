@@ -43,8 +43,17 @@ class ViewController: UIViewController {
             return "O"
         }
     }
+    
     func isNotEmpty(sequence: [String]) -> Bool {
         if sequence[0] != "" && sequence[1] != "" && sequence[2] != "" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func isHomogeneous(sequence: [String]) -> Bool {
+        if sequence[0] == sequence[1] && sequence[1] == sequence[2] {
             return true
         } else {
             return false
@@ -67,6 +76,7 @@ class ViewController: UIViewController {
     }
     
     func isGameOver() {
+        var gameWon = false
         let sequences = [
             "rows" : buttonsAlreadyPressed,
             "columns" : getColumns(),
@@ -75,7 +85,9 @@ class ViewController: UIViewController {
         
         for (sequenceType, arrayOfSequences) in sequences {
             for sequence in arrayOfSequences {
-                if isNotEmpty(sequence: sequence) && sequence[0] == sequence[1] && sequence[1] == sequence[2] {
+                if isNotEmpty(sequence: sequence) && isHomogeneous(sequence: sequence) {
+                    gameWon = true
+                    
                     if sequence[0] == "X" {
                         displayWinner(winningPlayer: "Player 1")
                     } else {
@@ -84,10 +96,19 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+        // tie
+        if numberOfTurns == 9 && !gameWon {
+            displayTie()
+        }
     }
     
     func displayWinner(winningPlayer: String) {
         turnLabel.text = "\(winningPlayer) wins!"
+    }
+    
+    func displayTie() {
+        turnLabel.text = "It's a tie!"
     }
     
     @IBAction func gameButtonPressed(_ sender: AnyObject) {
