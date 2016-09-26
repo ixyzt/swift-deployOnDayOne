@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ticTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OID-Pk-CrJ">
+                                <frame key="frameInset" minX="59" minY="150" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="1x1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFa-cC-EGQ">
+                                <frame key="frameInset" minX="147" minY="150" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="1x2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVA-Z5-KCi">
+                                <frame key="frameInset" minX="235" minY="150" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="1x3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mz0-RS-qdz">
+                                <frame key="frameInset" minX="59" minY="238" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="2x1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-SW-Sig">
+                                <frame key="frameInset" minX="147" minY="238" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="2x2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-6D-Mrx">
+                                <frame key="frameInset" minX="235" minY="238" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="2x3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEw-7e-et7">
+                                <frame key="frameInset" minX="59" minY="326" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="3x1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFt-3P-tOx">
+                                <frame key="frameInset" minX="147" minY="326" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="3x2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mek-1X-BWC">
+                                <frame key="frameInset" minX="235" minY="326" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89592778497409331" green="0.89592778497409331" blue="0.89592778497409331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="3x3"/>
+                                <connections>
+                                    <action selector="gameSquarePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSs-ay-XHa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="gameButton1x1" destination="OID-Pk-CrJ" id="flx-gx-1hs"/>
+                        <outlet property="gameButton1x2" destination="WFa-cC-EGQ" id="yqa-uq-3MJ"/>
+                        <outlet property="gameButton1x3" destination="NVA-Z5-KCi" id="h0g-jm-Mps"/>
+                        <outlet property="gameButton2x1" destination="mz0-RS-qdz" id="Mir-4T-ybs"/>
+                        <outlet property="gameButton2x2" destination="gfu-SW-Sig" id="vxn-Rn-nfe"/>
+                        <outlet property="gameButton2x3" destination="cIS-6D-Mrx" id="geK-Hh-8Mc"/>
+                        <outlet property="gameButton3x1" destination="eEw-7e-et7" id="eak-62-4Cu"/>
+                        <outlet property="gameButton3x2" destination="CFt-3P-tOx" id="2Hl-yx-ypb"/>
+                        <outlet property="gameButton3x3" destination="Mek-1X-BWC" id="Krm-yD-Ybg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
